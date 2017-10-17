@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+}
+
+.storyboard,
+.scene {
+  height: 40rem;
+  border: 5px solid black;
+  display: block;
+}
+.storyboard{
+  width: 80%;
+  position: relative;
+  align-content: center;
+}
+
+.scene {
+  position: relative;
+  height: 35rem;
+  margin: 1rem;
+  width: 95%;
+  left: 0;
+  top: 0;
+  background-image: asset_url("cityscape.jpeg");
+  background-size: cover;
+}
+
+.image-div{
+  position: absolute;
+  bottom: 10%;
+  width: 60px;
+  height: 60px;
+  border: 5px solid red;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  transition: transform all 3s;
+  opacity: 1;
+}
+
+.image-div:hover {
+  transform: scale(2);
+
+}
+
+.text-option-display{
+  position: absolute;
+  width: 80%;
+  height: 30%;
+  top: 20%;
+  left: 10%;
+  border: 5px solid red;
+  background-color: rgba(256,256,256,0.5),
+
+}
