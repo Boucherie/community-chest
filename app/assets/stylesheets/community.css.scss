@@ -7,17 +7,22 @@
   height: 40rem;
   border: 5px solid black;
   display: block;
+  border-radius: 5rem;
+
 }
 .storyboard{
   width: 80%;
   position: relative;
-  align-content: center;
+  border: groove 5px gray;
+  background-color: #343434;
+  margin: 10% auto;
 }
 
 .scene {
   position: relative;
-  height: 35rem;
-  margin: 1rem;
+  align-self: center;
+  height: 90%;
+  margin: 2%;
   width: 95%;
   left: 0;
   top: 0;
@@ -30,7 +35,9 @@
   bottom: 10%;
   width: 60px;
   height: 60px;
-  border: 5px solid red;
+  // border: 5px solid red;
+  background-color: rgba(256,256,256,0.5);
+  border-radius: 3rem;
 }
 
 img {
@@ -45,13 +52,19 @@ img {
 
 }
 
-.text-option-display{
+.text-option-display,{
   position: absolute;
   width: 80%;
   height: 30%;
   top: 20%;
   left: 10%;
   border: 5px solid red;
-  background-color: rgba(256,256,256,0.5),
+  background-color: rgba(256,256,256,0.5);
+  border-radius: 5rem;
+  text-align: center;
+}
 
+.text-selections{
+  display: none;
+  font-size: 3rem;
 }
