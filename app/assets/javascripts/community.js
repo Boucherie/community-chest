@@ -54,6 +54,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // addEventListener for clicking on divs - info div, move to next page...
   //switch/case function for each scenario
+function cloneFirstBoard(){
+  var storyBoard = document.getElementById('board1');
+  let clone = storyBoard.cloneNode(true);
+  clone.id = "board2";
+  document.body.appendChild(clone);
+
+  var divOneSceneTwo = clone.querySelector("#container1").setAttribute("id", "container1b");
+  clone.querySelector("#first-image").remove();
+  var divTwoSceneTwo = clone.querySelector("#container2").setAttribute("id", "container2b");  clone.querySelector("#second-image").remove();
+  var divThreeSceneTwo = clone.querySelector("#container3").setAttribute("id", "container3b");  clone.querySelector("#third-image").remove();
+  var divFourSceneTwo = clone.querySelector("#container4").setAttribute("id", "container4b");  clone.querySelector("#fourth-image").remove();
+
+  var divTextOneB = clone.querySelector("#selection-one").setAttribute("id", "selection1b");
+  var divTextTwoB = clone.querySelector("#selection-two").setAttribute("id", "selection2b");
+  var divTextThreeB = clone.querySelector("#selection-three").setAttribute("id", "selection3b");
+  var divTextFourB = clone.querySelector("#selection-four").setAttribute("id", "selection4b");
+}
+
   function removeAllPreviousListeners(){
     firstDiv.removeEventListener('click', cloneSceneA);
     firstDiv.removeEventListener('mouseover', showTextOne);
@@ -65,39 +83,29 @@ document.addEventListener('DOMContentLoaded', function(){
     fourthDiv.removeEventListener('mouseover', showTextFour);
   }
 
-  
-
   function cloneSceneA(e){
-    var storyBoard = document.getElementById('board1');
-    let clone = storyBoard.cloneNode(true);
-    clone.id = "board2";
-    document.body.appendChild(clone);
+    cloneFirstBoard();
     removeAllPreviousListeners();
+    // scenario
+    // get new images from html (store somewhere), call new event Listeners here
   }
 
   function cloneSceneB(e){
-    var storyBoard = document.getElementById('board1');
-    let clone = storyBoard.cloneNode(true);
-    clone.id = "board2";
-    document.body.appendChild(clone);
+    cloneFirstBoard();
     removeAllPreviousListeners();
+    // scenario
   }
 
   function cloneSceneC(e){
-    var storyBoard = document.getElementById('board1');
-    let clone = storyBoard.cloneNode(true);
-    clone.id = "board2";
-    document.body.appendChild(clone);
+    cloneFirstBoard();
     removeAllPreviousListeners();
+    // scenario
   }
 
   function cloneDScene(e){
-    var storyBoard = document.getElementById('board1');
-    let clone = storyBoard.cloneNode(true);
-    clone.id = "board2";
-    document.body.appendChild(clone);
+    cloneFirstBoard();
     removeAllPreviousListeners();
-
+    // scenario
   }
 
   firstDiv.addEventListener('click', cloneSceneA);
